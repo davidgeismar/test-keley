@@ -2,11 +2,11 @@ class ProductsController < ApplicationController
   before_action :set_product,  only: [:show]
   def new
     @product = Product.new
-    @categories_product = Categories_product.new
   end
 
   def create
     @product = Product.new(product_params)
+    raise
     if @product.save
       redirect_to products_path
     else

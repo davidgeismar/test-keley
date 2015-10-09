@@ -8,12 +8,18 @@
               <div class="col-md-2">
                 <%= image_tag product.picture.url(:medium) %>
               </div>
-              <div class="col-md-offset-3 col-md-3">
+              <div class="col-md-offset-2 col-md-3">
                 <p> <%= product.description %> </p>
               </div>
-              <div class="col-md-offset-6 col-md-3">
-                <p> <%= product.price %> euros </p>
-                <p> <%= product.weight %> kg </p>
+              <div class="col-md-offset-8 col-md-3">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <p> <%= product.price %> euros </p>
+                  </div>
+                  <div class="col-xs-6">
+                    <p> <%= product.weight %> kg </p>
+                  </div>
+                </div>
                 <p> <%= link_to "En savoir plus", product_path(product) %></p>
               </div>
             </div>
@@ -21,5 +27,25 @@
         </div>
       </div>
     <% end %>
+      <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
   </div>
 </div>
+<nav>
+

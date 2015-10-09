@@ -7,12 +7,19 @@ div class="banner"
         div class= "panel-body"
           =simple_form_for @product, html: { multipart: true } do |t|
             = t.error_notification
-            = t.input :name, label: 'Nom'
+            = t.input :name, label: 'Nom', class: "form-"
             = t.input :description, label: 'Description', required: true
             = t.input :price, label: 'Prix', required: true
             = t.input :weight, label: 'Poids', required: true
             = t.label :picture
             = t.file_field :picture
+            = t.label :picture1
+            = t.file_field :picture1
+            = t.label :picture2
+            = t.file_field :picture2
+            = t.label :picture3
+            = t.file_field :picture3
+            = t.association :categories, as: :check_boxes
             = t.button :submit, value: "Valider",  class: "btn-success marge-bas"
 
 

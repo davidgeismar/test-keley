@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151009152003) do
+ActiveRecord::Schema.define(version: 20151009204806) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -19,25 +19,37 @@ ActiveRecord::Schema.define(version: 20151009152003) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories_products", force: :cascade do |t|
+  create_table "category_products", force: :cascade do |t|
     t.integer "product_id"
     t.integer "category_id"
   end
 
-  add_index "categories_products", ["category_id"], name: "index_categories_products_on_category_id"
-  add_index "categories_products", ["product_id"], name: "index_categories_products_on_product_id"
+  add_index "category_products", ["category_id"], name: "index_category_products_on_category_id"
+  add_index "category_products", ["product_id"], name: "index_category_products_on_product_id"
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.integer  "price"
     t.integer  "weight"
     t.string   "description"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.string   "picture_file_name"
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+    t.string   "picture1_file_name"
+    t.string   "picture1_content_type"
+    t.integer  "picture1_file_size"
+    t.datetime "picture1_updated_at"
+    t.string   "picture2_file_name"
+    t.string   "picture2_content_type"
+    t.integer  "picture2_file_size"
+    t.datetime "picture2_updated_at"
+    t.string   "picture3_file_name"
+    t.string   "picture3_content_type"
+    t.integer  "picture3_file_size"
+    t.datetime "picture3_updated_at"
   end
 
 end

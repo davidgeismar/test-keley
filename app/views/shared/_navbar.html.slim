@@ -1,4 +1,16 @@
 nav class="navbar navbar-default navbar-fixed-top" role="navigation"
   div class="container"
     div class="navbar-header"
+      .container
+        .row
+          .col-sm-8
+            h1 class="emperor" Recherche
+          .col-sm-4
+            .l-search-form
+              = form_tag products_path, method: 'get', :remote => true, class: 'form-inline' do ||
+                .form-group
+                  = text_field_tag :content, nil, placeholder: 'Rechercher une ville', autosave: true, autofocus: true, class: 'form-control'
+                  = button_tag(type: 'submit', class: 'btn btn-success') do ||
+                    i.fa.fa-search
+
 
