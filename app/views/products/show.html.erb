@@ -14,7 +14,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
               <div class="item active">
-
+                 <%= image_tag @product.picture1.url(:medium) %>
                 <div class="carousel-caption">
 
                 </div>
@@ -22,10 +22,8 @@
               <div class="item">
                 <%= image_tag @product.picture.url(:medium) %>
                 <div class="carousel-caption">
-                  ...
                 </div>
               </div>
-              ...
             </div>
 
             <!-- Controls -->
@@ -46,6 +44,11 @@
         <p> Poids: <%= @product.weight %> Kg </p>
         <p>  Prix TTC:  <%= @product.price %> euros</p>
         <p>  Catégories attachées: </p>
+        <ul>
+          <% @product.categories.each do |category| %>
+            <li><%= category.name%> </li>
+          <% end -%>
+        </ul>
       </div>
     </div>
   </div>

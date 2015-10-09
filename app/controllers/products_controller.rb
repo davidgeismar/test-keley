@@ -6,7 +6,6 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    raise
     if @product.save
       redirect_to products_path
     else
@@ -30,6 +29,11 @@ class ProductsController < ApplicationController
       :description,
       :weight,
       :picture,
+      :picture1,
+      :picture2,
+      :picture3,
+      :category_ids
+
     )
   end
 
