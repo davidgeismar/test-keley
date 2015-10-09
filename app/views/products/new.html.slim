@@ -1,0 +1,21 @@
+div class="banner"
+  div class="container marged-top"
+    div class= "col-xs-12 col-md-offset-3 col-md-5 bigmarge"
+      div class="panel panel-default"
+        div class= "panel-heading"
+          h4 Création Produit
+        div class= "panel-body"
+          =simple_form_for @product, html: { multipart: true } do |t|
+            = t.error_notification
+            = t.input :name, label: 'Nom'
+            = t.input :description, label: 'Description', required: true
+            = t.input :price, label: 'Prix', required: true
+            = t.input :weight, label: 'Poids', required: true
+            = t.label :picture
+            = t.file_field :picture
+            = t.button :submit, value: "Valider",  class: "btn-success marge-bas"
+
+
+
+
+

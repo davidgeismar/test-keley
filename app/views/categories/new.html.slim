@@ -1,0 +1,11 @@
+div class="banner"
+  div class="container marged-top"
+    div class= "col-xs-12 col-md-offset-3 col-md-5 bigmarge"
+      div class="panel panel-default"
+        div class= "panel-heading"
+          h4 Création Catégorie
+        div class= "panel-body"
+          =simple_form_for @category do |t|
+            = t.error_notification
+            = t.input :name, label: 'Nom'
+            = t.button :submit, value: "Valider",  class: "btn-success marge-bas"

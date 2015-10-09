@@ -1,0 +1,17 @@
+<div class="banner">
+  <div class= "container marged-top">
+    <h1 class= "text-left emperor"> <%= @product.name %> </h1>
+    <div class="row">
+      <div class="col-xs-8">
+          <%= image_tag @product.picture.url(:medium) %>
+      </div>
+
+      <div class= "col-xs-4">
+        <p><%= @product.description %></p>
+        <p> Poids: <%= @product.weight %> Kg </p>
+        <p>  Prix TTC:  <%= @product.price %> euros</p>
+        <p>  Catégories attachées: </p>
+      </div>
+    </div>
+  </div>
+</div>

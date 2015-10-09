@@ -1,0 +1,17 @@
+<div class="banner">
+  <div class="container marged-top">
+    <% @categories.each do |category| %>
+      <div class="panel panel-default marged">
+        <div class="panel-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-offset-3 col-md-3">
+                <p> <%= category.name %> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
