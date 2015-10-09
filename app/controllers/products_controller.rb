@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
       :picture1,
       :picture2,
       :picture3,
-      :category_ids
+      :category_ids => []
 
     )
   end
