@@ -1,51 +1,13 @@
 <div class="banner">
   <div class="container marged-top">
-    <% @products.each do |product| %>
-      <div class="panel panel-default marged">
-        <div class="panel-body">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-2">
-                <%= image_tag product.picture.url(:medium) %>
-              </div>
-              <div class="col-md-offset-2 col-md-3">
-                <p><strong> <%= product.description %></strong> </p>
-              </div>
-              <div class="col-md-offset-8 col-md-3">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <p> <%= product.price %> euros </p>
-                  </div>
-                  <div class="col-xs-6">
-                    <p> <%= product.weight %> kg </p>
-                  </div>
-                </div>
-                <p> <%= link_to "En savoir plus", product_path(product) %></p>
-              </div>
-            </div>
-          </div>
+    <div class="panel panel-default marged">
+      <div class="panel-body">
+        <div class="container-fluid">
+         <%= render 'products'%>
         </div>
       </div>
-    <% end %>
-      <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+    </div>
+  <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
   </div>
 </div>
-<nav>
 

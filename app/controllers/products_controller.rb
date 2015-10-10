@@ -14,7 +14,16 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all
+    if params[:content].present?
+      @products = Product.search(params[:content]).paginate(:page => params[:page], :per_page => 2)
+
+      respond_to do |format|
+        format.js {}
+        format.html{ render :index }
+      end
+    else
+      @products = Product.all.paginate(:page => params[:page], :per_page => 2)
+    end
   end
 
   def show

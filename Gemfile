@@ -24,8 +24,12 @@ gem 'jbuilder',                     '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc',                         '~> 0.4.0', group: :doc
 gem 'slim',                         '~> 3.0.6'
-gem 'aws-sdk', '< 2.0'
+gem 'aws-sdk',                      '< 2.0'
+gem 'pg_search',                    '~> 1.0.5'
+gem 'pg',                           '~> 0.18.1'
 gem 'paperclip'
+gem 'font-awesome-sass',            '~> 4.3.1'
+gem 'will_paginate-bootstrap'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

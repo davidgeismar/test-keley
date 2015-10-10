@@ -1,4 +1,8 @@
 class Product < ActiveRecord::Base
+  include PgSearch
+  pg_search_scope :search,
+  :against => [:name],
+  :using => {:tsearch => {:prefix => true} }
   has_many :category_products
   has_many :categories, through: :category_products
   has_attached_file :picture,
