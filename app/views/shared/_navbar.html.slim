@@ -1,10 +1,9 @@
 nav class="navbar navbar-default navbar-fixed-top" role="navigation"
-  div class="container"
+  div class="container-fluid bg-info"
     div class="navbar-header"
       .container
         .row
-          .col-sm-8
-            h1 class="emperor" tri par :
+          div class="col-sm-offset-2 col-sm-2"
             = form_tag products_path, method: 'get', :remote => true, class: 'form-inline min-marged-top' do ||
               .form-group
                 = check_box_tag :price
@@ -12,9 +11,9 @@ nav class="navbar navbar-default navbar-fixed-top" role="navigation"
                 = button_tag :submit, class: 'btn btn-success' do
                   'Go
 
-          .col-sm-4
+          div class= "col-sm-offset-4 col-sm-4"
             .l-search-form
-              = form_tag products_path, method: 'get', :remote => true, class: 'form-inline min-marged-top' do ||
+              = form_tag products_path, method: 'get', :remote => true, class: 'form-inline padded' do ||
                 .form-group
                   = text_field_tag :content, nil, placeholder: 'Rechercher une produit', autosave: true, autofocus: true, class: 'form-control'
                   = button_tag(type: 'submit', class: 'btn btn-success') do ||
