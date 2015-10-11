@@ -33,6 +33,7 @@ class ProductsController < ApplicationController
         format.html{ render :index }
       end
     elsif params[:weight] == "1"
+
       @products = Product.all.order(weight: :desc).paginate(:page => params[:page], :per_page => 2)
       respond_to do |format|
         format.js {}

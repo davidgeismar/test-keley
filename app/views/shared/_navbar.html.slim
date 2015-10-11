@@ -5,11 +5,17 @@ nav class="navbar navbar-default navbar-fixed-top" role="navigation"
         .row
           div class="col-sm-offset-2 col-sm-2"
             = form_tag products_path, method: 'get', :remote => true, class: 'form-inline min-marged-top' do ||
-              .form-group
-                = check_box_tag :price
-                = check_box_tag :weight
-                = button_tag :submit, class: 'btn btn-success' do
-                  'Go
+              .row
+                .col-xs-6
+                  = label_tag "Prix"
+                  = check_box_tag :price
+                .col-xs-6
+                  = button_tag :submit, class: 'btn btn-success' do
+                    'Go
+                .col-xs-12
+                  = label_tag "Poids"
+                  = check_box_tag :weight
+
 
           div class= "col-sm-offset-4 col-sm-4"
             .l-search-form
