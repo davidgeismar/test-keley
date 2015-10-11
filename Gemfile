@@ -31,6 +31,7 @@ gem 'paperclip'
 gem 'font-awesome-sass',            '~> 4.3.1'
 gem 'will_paginate-bootstrap'
 gem 'devise'
+gem 'high_voltage',                 '~> 2.4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

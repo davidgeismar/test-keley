@@ -2,6 +2,8 @@ nav class="navbar navbar-default navbar-fixed-top" role="navigation"
   div class="container-fluid bg-info"
     div class="navbar-header"
       .container
+
+
         .row
           div class="col-sm-offset-2 col-sm-2"
             = form_tag products_path, method: 'get', :remote => true, class: 'form-inline min-marged-top' do ||
@@ -24,5 +26,4 @@ nav class="navbar navbar-default navbar-fixed-top" role="navigation"
                   = text_field_tag :content, nil, placeholder: 'Rechercher une produit', autosave: true, autofocus: true, class: 'form-control'
                   = button_tag(type: 'submit', class: 'btn btn-success') do ||
                     i.fa.fa-search
-
 
