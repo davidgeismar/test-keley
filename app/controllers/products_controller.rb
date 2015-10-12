@@ -16,32 +16,40 @@ class ProductsController < ApplicationController
 
   def index
     if params[:content].present? && (params[:price] == "1")
-      @products = Product.search(params[:content]).order(price: :desc).paginate(:page => params[:page], :per_page => 2)
+      @products = Product.search(params[:content]).order(price: :desc)
       respond_to do |format|
         format.js {}
         format.html{ render :index }
       end
     elsif params[:content].present? && (params[:weight] == "1")
-      @products = Product.search(params[:content]).order(weight: :desc).paginate(:page => params[:page], :per_page => 2)
+      @products = Product.search(params[:content]).order(weight: :desc)
+      respond_to do |format|
+        format.js {}
+        format.html{ render :index }
+      end
+    elsif params[:content].present?
+      @products = Product.search(params[:content])
+      # binding.pry
       respond_to do |format|
         format.js {}
         format.html{ render :index }
       end
     elsif params[:price] == "1"
-      @products = Product.all.order(price: :desc).paginate(:page => params[:page], :per_page => 2)
+      @products = Product.all.order(price: :desc)
       respond_to do |format|
         format.js {}
         format.html{ render :index }
       end
     elsif params[:weight] == "1"
-
-      @products = Product.all.order(weight: :desc).paginate(:page => params[:page], :per_page => 2)
+      @products = Product.all.order(weight: :desc)
+      # binding.pry
       respond_to do |format|
         format.js {}
         format.html{ render :index }
       end
     else
-      @products = Product.all.paginate(:page => params[:page], :per_page => 2)
+      @products = Product.all
+      # binding.pry
     end
   end
 

@@ -16,21 +16,59 @@ div class="banner"
             div class="form-group"
               = t.input :weight, label: 'Poids', required: true, input_html: { class: 'form-control' }
             div class="form-group"
-              = t.label :picture
-              = t.file_field :picture
+              = t.label "Photo Produit 1"
+              div class="btn btn-primary btn-upload"
+                  = t.file_field :picture, id: "myFileInput1"
+                  i class="fa fa-fw fa-cloud-upload"
+                    'Ajouter
+                    span id="fileName1"
             div class="form-group"
-              = t.label :picture1
-              = t.file_field :picture1
+              = t.label "Photo Produit 2"
+              div class="btn btn-primary btn-upload"
+                = t.file_field :picture1, id: "myFileInput2"
+                i class="fa fa-fw fa-cloud-upload"
+                  'Ajouter
+                  span id="fileName2"
             div class="form-group"
-              = t.label :picture2
-              = t.file_field :picture2
+              = t.label "Photo Produit 3"
+              div class="btn btn-primary btn-upload"
+                = t.file_field :picture2, id: "myFileInput3"
+                i class="fa fa-fw fa-cloud-upload"
+                  'Ajouter
+                  span id="fileName3"
             div class="form-group"
-              = t.label :picture3
-              = t.file_field :picture3
+              = t.label "Photo Produit 4"
+              div class="btn btn-primary btn-upload"
+                = t.file_field :picture3, id: "myFileInput4"
+                i class="fa fa-fw fa-cloud-upload"
+                  'Ajouter
+                  span id="fileName4"
+
             div class="form-group"
               = t.association :categories, as: :check_boxes, label: "Catégories"
             = t.button :submit, value: "Valider",  class: "btn-success marge-bas"
 
+= content_for :after_js do
+  javascript:
+    $(document).ready(function(){
+      realInputField = $('#myFileInput1')
+      realInputField.change(function() {
+        $('#fileName1').append( "<i class='fa fa-check'></i>" )
+      });
+      realInputField = $('#myFileInput2')
+      realInputField.change(function() {
+        $('#fileName2').append( "<i class='fa fa-check'></i>" )
+      });
+
+      realInputField = $('#myFileInput3')
+      realInputField.change(function() {
+        $('#fileName3').append( "<i class='fa fa-check'></i>" )
+      });
+      realInputField = $('#myFileInput4')
+      realInputField.change(function() {
+        $('#fileName4').append( "<i class='fa fa-check'></i>" )
+      });
+    });
 
 
 

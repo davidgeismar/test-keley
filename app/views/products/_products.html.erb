@@ -1,5 +1,6 @@
-<% @products.each do |product| %>
+
   <div class="row padded js-product-row">
+  <% @products.each do |product| %>
     <div class="col-md-2">
       <%= image_tag product.picture.url(:medium) %>
     </div>
@@ -21,6 +22,7 @@
         </div>
       </div>
     </div>
+  <% end -%>
   </div>
-<% end -%>
+
 
