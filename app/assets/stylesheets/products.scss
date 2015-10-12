@@ -8,6 +8,11 @@
   min-height: 700px;
 }
 
+.js-product-row {
+  border-bottom: solid 2px black;
+  background-color: #EDEFF0;
+}
+
 .padded {
   padding: 2em;
 }
@@ -26,3 +31,70 @@
 .min-height-caroussel {
   min-height: 280px;
 }
+
+// .post {
+//   display: flex;
+//   align-items: center;
+//   transition: all 0.15s ease;
+//   &-upvote {
+//     flex: 0 0 80px;
+//   }
+//   &-body {
+//     flex: 1 1 auto;
+//   }
+//   &-controls {
+//     flex: 0 0 150px;
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   &-upvote {
+//     text-align: center;
+//     transition: all 0.15s ease;
+//     &-count {
+//       font-size: 13px;
+//       line-height: 20px;
+//       margin: 2px 0 0;
+//       font-weight: bold;
+//     }
+//     &-arrow {
+//       transition: all 0.15s ease;
+//       width: 0;
+//       height: 0;
+//       border-left: 6px solid transparent;
+//       border-right: 6px solid transparent;
+//       border-top: 6px solid transparent;
+//       border-bottom: 9px solid black;
+//       border-radius: 2px;
+//       margin: auto;
+//     }
+//     &:hover {
+//       color: #5898f1;
+//       cursor: pointer;
+//       .post-upvote-arrow { border-bottom: 9px solid #5898f1 }
+//     }
+//   }
+//   &-body {
+//     h3 {
+//       font-weight: bold;
+//       font-size: 23px
+//     }
+//     p {
+//       font-weight: 500;
+//       color: #999999;
+//     }
+//   }
+//   &-control-hidden {
+//     color: transparent;
+//     font-size: 15px;
+//     transition: all 0.15s ease;
+//     border-color: transparent;
+//   }
+//   &:hover {
+//     background: #f7f7fa;
+//     cursor: pointer;
+//     .post-control-hidden { border-color: rgba(0, 0, 0, 0.03) }
+//     .post-upvote{ transform: scale(1.2) }
+//     .post-control-hidden{ color: #E6E6E6 }
+//   }
+// }

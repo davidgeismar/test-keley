@@ -1,0 +1,24 @@
+div class="banner"
+  div class="homepage"
+    div class="is-connected"
+     .container
+        .row
+          div class='col-xs-offset-4 col-xs-4'
+
+            div class="panel panel-default marged-top"
+              div class="panel-heading"
+                h2 = t('.sign_up', default: "S'inscrire sur KeleyProducts")
+              div class="panel-body"
+                = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+                  = f.error_notification
+                  div class="form-group"
+                   = f.input :email, required: true, autofocus: true, placeholder: 'admin@keleyproducts.fr', label: 'Email',input_html: { class: 'form-control' }
+                  div class="form-group"
+                   = f.input :password, required: true, placeholder: '••••••',input_html: { class: 'form-control' }
+
+                  = f.button :submit, t('.sign_up', default: 'Sign up'), class: 'btn-subscribe btn-warning'
+
+            / p class="separator-text" ou
+            / - if devise_mapping.omniauthable?
+            /   - resource_class.omniauth_providers.each do |provider|
+            /     = link_to t('.sign_in_with_provider', :provider => provider.to_s.titleize, :default => "Inscription avec #{provider.to_s.titleize}"), omniauth_authorize_path(resource_name, provider), class: "btn-subscribe-#{provider} btn-subscribe"
