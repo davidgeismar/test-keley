@@ -5,7 +5,7 @@ nav class="navbar navbar-default navbar-fixed-top" role="navigation"
 
 
         .row
-          div class="col-sm-offset-2 col-sm-2"
+          div class="col-sm-offset-1 col-sm-2"
             = form_tag products_path, method: 'get', :remote => true, class: 'form-inline min-marged-top' do ||
               .row
                 .col-xs-6
@@ -26,4 +26,10 @@ nav class="navbar navbar-default navbar-fixed-top" role="navigation"
                   = text_field_tag :content, nil, placeholder: 'Rechercher une produit', autosave: true, autofocus: true, class: 'form-control'
                   = button_tag(type: 'submit', class: 'btn btn-success') do ||
                     i.fa.fa-search
+
+          div class= "col-sm-1"
+            = link_to destroy_user_session_path, method: :delete do
+              i class="fa fa-lg fa-fw fa-power-off hidden-xs"
+              span class="visible-xs"
+                = t '.sign_out', default: 'Déconnexion'
 
