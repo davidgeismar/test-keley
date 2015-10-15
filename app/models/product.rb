@@ -1,5 +1,4 @@
 class Product < ActiveRecord::Base
-  acts_as_votable
   include PgSearch
   pg_search_scope :search,
   :against => [:name],

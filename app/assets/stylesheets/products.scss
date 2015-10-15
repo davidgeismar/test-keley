@@ -2,7 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.cont {
+  position: relative;
+  background-color: yellow;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
 
+}
+
+.top-right {
+  background-color: black;
+  position: absolute;
+  margin: 10px;
+  top: 10px;
+  right: 10px;
+}
+
+.righty {
+  float: right;
+   height: 1vh;
+   width: 50px;
+   margin: 10px;
+   background-color: purple;
+}
+
+.under {
+    background-color: purple;
+    height: 90px;
+   width: 110px;
+   margin: 10px;
+   clear: left;
+}
+
+.lefty {
+  float: left;
+  height: 90px;
+  width: 50px;
+  background-color: purple;
+  margin: 10px;
+}
+.flex-item {
+  background-color: purple;
+  flex: 2 0 200px;
+  margin: 10px;
+  height: 90px;
+  width: 100px;
+}
 .banner {
   background-size: cover;
   min-height: 700px;
@@ -30,6 +76,17 @@
 
 .min-height-caroussel {
   min-height: 280px;
+}
+
+.flex-item {
+  flex: 0 0 200px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 300px;
 }
 
 .btn-upload {

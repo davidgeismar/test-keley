@@ -1,10 +1,12 @@
 
-  <div class="row padded js-product-row">
   <% @products.each do |product| %>
+<div class="row js-product-row">
+  <div class="padded">
+
     <div class="col-md-2">
       <%= image_tag product.picture.url(:medium) %>
     </div>
-    <div class="col-md-offset-2 col-md-3">
+    <div class="col-md-offset-3 col-md-3">
       <h3><%= product.description %></h3>
     </div>
     <div class="col-md-offset-1 col-md-3">
@@ -22,7 +24,10 @@
         </div>
       </div>
     </div>
-  <% end -%>
+
   </div>
+</div>
+
+<% end -%>
 
 
