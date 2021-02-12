@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails',                          '4.2.3'
+gem 'rails', '6.0.3.5'
 # Use sqlite3 as the database for Active Record
 gem 'bootstrap-sass',               '~> 3.3.3'
 gem 'sqlite3'
@@ -35,7 +35,7 @@ gem 'will_paginate-bootstrap'
 gem 'devise'
 gem 'high_voltage',                 '~> 2.4.0'
 gem 'js-routes'
-gem 'react-rails'
+gem 'react-rails', '>= 1.3.1'
 gem 'acts_as_votable'
 source 'https://rails-assets.org' do
   gem 'rails-assets-classnames'
