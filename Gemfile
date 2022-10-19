@@ -9,14 +9,14 @@ gem 'rails',                          '4.2.3'
 gem 'bootstrap-sass',               '~> 3.3.3'
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails',                   '~> 5.0'
+gem 'sass-rails', '~> 5.0', '>= 5.0.4'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier',                     '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails',                 '~> 4.1.0'
+gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'simple_form',                  '~> 3.1.0'
+gem 'simple_form', '~> 3.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -26,7 +26,7 @@ gem 'jbuilder',                     '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc',                         '~> 0.4.0', group: :doc
 gem 'slim',                         '~> 3.0.6'
-gem 'aws-sdk',                      '< 2.0'
+gem 'aws-sdk', '>= 1.64.0', '< 2.0'
 gem 'pg_search',                    '~> 1.0.5'
 gem 'pg',                           '~> 0.18.1'
 gem 'paperclip'
