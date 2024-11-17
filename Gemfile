@@ -34,7 +34,7 @@ gem 'font-awesome-sass',            '~> 4.3.1'
 gem 'will_paginate-bootstrap'
 gem 'devise'
 gem 'high_voltage',                 '~> 2.4.0'
-gem 'js-routes'
+gem 'js-routes', '>= 2.3.0'
 gem 'react-rails'
 gem 'acts_as_votable'
 source 'https://rails-assets.org' do
