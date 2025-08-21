@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails',                          '4.2.3'
+gem 'rails', '7.1.5.2'
 # Use sqlite3 as the database for Active Record
 gem 'bootstrap-sass',               '~> 3.3.3'
 gem 'sqlite3'
@@ -27,7 +27,7 @@ gem 'jbuilder',                     '~> 2.0'
 gem 'sdoc',                         '~> 0.4.0', group: :doc
 gem 'slim',                         '~> 3.0.6'
 gem 'aws-sdk',                      '< 2.0'
-gem 'pg_search',                    '~> 1.0.5'
+gem 'pg_search', '~> 1.0.6'
 gem 'pg',                           '~> 0.18.1'
 gem 'paperclip'
 gem 'font-awesome-sass',            '~> 4.3.1'
@@ -35,7 +35,7 @@ gem 'will_paginate-bootstrap'
 gem 'devise'
 gem 'high_voltage',                 '~> 2.4.0'
 gem 'js-routes'
-gem 'react-rails'
+gem 'react-rails', '>= 1.3.2'
 gem 'acts_as_votable'
 source 'https://rails-assets.org' do
   gem 'rails-assets-classnames'
@@ -50,7 +50,7 @@ end
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'annotate'
+  gem 'annotate', '>= 3.2.0'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'letter_opener'
